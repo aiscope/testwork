@@ -159,14 +159,14 @@ Route::set('session', 'api/session(/)(<session_id>)(/places)',
 		'action'     => 'freeplaces'
 	));
 
-Route::set('tickets', 'api/tickets/buy/session/<session_id>/places/<places_str>',
+Route::set('tickets', 'api/tickets/buy(/)(session/<session_id>/places/<places_str>)',
 	array('session_id' => '[0-9]+', 'places_str' => '[0-9\,]+'))
 	->defaults(array(
 		'controller' => 'tickets',
 		'action'     => 'buy'
 	));
 
-Route::set('reject_tickets', 'api/tickets/reject/<key>',
+Route::set('reject_tickets', 'api/tickets/reject(/)(<key>)',
 	array('key' => '[0-9]+'))
 	->defaults(array(
 		'controller' => 'tickets',

@@ -177,3 +177,12 @@
 #7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
 #9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 10:54:25 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: places_str ~ APPPATH/classes/Controller/Tickets.php [ 11 ] in /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php:11
+2014-04-16 10:54:25 --- DEBUG: #0 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(11): Kohana_Core::error_handler(8, 'Undefined index...', '/home/dataminer...', 11, Array)
+#1 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_buy()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#4 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#7 {main} in /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php:11
