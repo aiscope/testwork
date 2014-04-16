@@ -32,7 +32,7 @@ class Model_Cinema extends Model
 
 		$query = DB::query(Database::SELECT,
 		"SELECT session.session_id, session.start_time, session.end_time, session.empty_places,
-			movie.name, hall.name, cinema.name
+			movie.name as movie_name, hall.name as hall_name, cinema.name as cinema_name
 		 FROM session
 		 INNER JOIN movie ON movie.movie_id = session.movie_id
 		 INNER JOIN hall ON hall.hall_id = session.hall_id

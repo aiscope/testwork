@@ -1,7 +1,5 @@
 Тестовое задание
 
-Тестовое задание для Эксмо, издательство.
-
 Данная тестовая работа выполнена с использованием последней на текущий момент
 версии фрейморка Kohana. 
 
@@ -28,8 +26,8 @@ GET /api/session/<ид сеанса>/places
 
 Покупка билета
 
-POST /api/tickets/buy?session=<ид сеанса>&places=1,3,5,7
+POST /api/tickets/buy?session=<ид сеанса>&places_str=1,3,5,7
 
 Отмена покупки
 
-POST /api/tickets/reject/<уникальный код>
+POST /api/tickets/reject/?key=<уникальный код>

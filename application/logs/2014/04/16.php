@@ -186,3 +186,169 @@
 #5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #6 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
 #7 {main} in /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php:11
+2014-04-16 12:03:03 --- EMERGENCY: Database_Exception [ 1044 ]: Access denied for user ''@'localhost' to database 'cinema' ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 108 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/MySQL.php:75
+2014-04-16 12:03:03 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/MySQL.php(75): Kohana_Database_MySQL->_select_db('cinema')
+#1 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/MySQL.php(431): Kohana_Database_MySQL->connect()
+#2 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database.php(478): Kohana_Database_MySQL->escape('????????????')
+#3 [internal function]: Kohana_Database->quote('????????????')
+#4 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(196): array_map(Array, Array)
+#5 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(234): Kohana_Database_Query->compile(Object(Database_MySQL))
+#6 /home/dataminer/workspace/testwork/application/classes/Model/Cinema.php(47): Kohana_Database_Query->execute()
+#7 /home/dataminer/workspace/testwork/application/classes/Controller/Cinema.php(10): Model_Cinema->get_schedule('????????????', NULL)
+#8 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Cinema->action_schedule()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Cinema))
+#11 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#13 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#14 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/MySQL.php:75
+2014-04-16 12:14:53 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '487281689'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '487281689' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:14:53 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('487281689')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:15:01 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '487281689'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '487281689' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:15:01 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('487281689')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:15:12 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '487281689'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '487281689' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:15:12 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('487281689')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:16:09 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '487281689'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '487281689' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:16:09 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('487281689')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:17:25 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '487281689'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '487281689' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:17:25 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('487281689')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:18:10 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '1604267863'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '1604267863' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:18:10 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('1604267863')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:18:18 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '1604267863'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '1604267863' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:18:18 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('1604267863')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:20:26 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '1604267863'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '1604267863' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:20:26 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('1604267863')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:21:12 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '1604267863'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '1604267863' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:21:12 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('1604267863')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:21:19 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.session_id
+		WHERE uniq_key = '1604267863'' at line 3 [ SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
+		FROM buy
+		INNER JOIN session.session_id = buy.session_id
+		WHERE uniq_key = '1604267863' ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251
+2014-04-16 12:21:19 --- DEBUG: #0 /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT buy.sess...', false, Array)
+#1 /home/dataminer/workspace/testwork/application/classes/Model/Tickets.php(117): Kohana_Database_Query->execute()
+#2 /home/dataminer/workspace/testwork/application/classes/Controller/Tickets.php(30): Model_Tickets->reject_tickets('1604267863')
+#3 /home/dataminer/workspace/testwork/system/classes/Kohana/Controller.php(84): Controller_Tickets->action_reject()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Tickets))
+#6 /home/dataminer/workspace/testwork/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/dataminer/workspace/testwork/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/dataminer/workspace/testwork/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/dataminer/workspace/testwork/modules/database/classes/Kohana/Database/Query.php:251

@@ -17,7 +17,7 @@ class Model_Session extends Model
 		}
 
 		$query = DB::query(Database::SELECT,
-		"SELECT session.session_id as session, session.empty_places as freeplaces
+		"SELECT session.session_id as session, session.empty_places as empty_places
 		 FROM session
 		 WHERE session.session_id = :session_id");
 

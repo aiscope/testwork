@@ -20,8 +20,8 @@ return array
 			 */
 			'hostname'   => 'localhost',
 			'database'   => 'cinema',
-			'username'   => 'root',
-			'password'   => 'mns58tp',
+			'username'   => '',
+			'password'   => '',
 			'persistent' => FALSE,
 		),
 		'table_prefix' => '',

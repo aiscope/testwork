@@ -97,10 +97,15 @@ class Model_Tickets extends Model
 	 */
 	public function reject_tickets($key)
 	{
-		// Получим ранее купленные места и ид сеанса
+		if (empty($key)) {
+			return array('err' => TRUE, 'error_message' => 'Не задан номер уникального ключа!');
+		}
+
+		// Получим ранее купленные места и ид сеанса а также время начала сеанса
 		$query = DB::query(Database::SELECT,
-		"SELECT buy.session_id as session_id, buy.places as places
+		"SELECT buy.session_id as session_id, buy.places as places, session.start_time as start_time
 		FROM buy
+		INNER JOIN session ON session.session_id = buy.session_id
 		WHERE uniq_key = :uniq_key");
 
 		$query->parameters(
@@ -110,6 +115,10 @@ class Model_Tickets extends Model
 		);
 
 		$data = $query->execute();
+		$start_time = $data[0]['start_time'];
+		if ((strtotime($start_time) - time()) <= 3600) {
+			return array('err' => TRUE, 'error_message' => 'Отменить покупку можно не ранее чем за 1 час до сеанса!');
+		}
 		$session_id = $data[0]['session_id'];
 		$places = explode(",", $data[0]['places']);
 
@@ -156,6 +165,6 @@ class Model_Tickets extends Model
 
 		$query->execute();
 
-		return array('err' => FALSE, 'status' => 'Deleted');
+		return array('err' => FALSE, 'status' => 'Rejected');
 	}
 }
