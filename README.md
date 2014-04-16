@@ -24,11 +24,11 @@ GET /api/film/<название фильма>/schedule
 
 Проверка свободных мест на сеанс:
 
-GET /api/session/<id сеанса>/places
+GET /api/session/<id session>/places
 
 Покупка билета
 
-POST /api/tickets/buy?session=<id сеанса>&places=1,3,5,7
+POST /api/tickets/buy?session=<id session>&places=1,3,5,7
 
 Отмена покупки
 
